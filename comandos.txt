@@ -1,0 +1,11 @@
+//Criar Model
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+
+//rodar as seed
+npx sequelize-cli db:seed:all
+
+//Migrar tabelas
+npx sequelize-cli db:migrate
+
+//apagar tabela
+npx sequelize-cli db:migrate:undo --name nome da migration
