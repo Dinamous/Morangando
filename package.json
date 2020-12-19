@@ -21,6 +21,7 @@
     "express-formidable": "^1.2.0",
     "express-mysql-session": "^2.1.5",
     "express-session": "^1.17.1",
+    "mysql-express-session": "^0.5.2",
     "mysql2": "^2.2.5",
     "pg": "^8.5.1",
     "redis": "^3.0.2",

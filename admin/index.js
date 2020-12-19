@@ -1,6 +1,9 @@
 const AdminBro = require('admin-bro');
 const { User, Company,Product,Provider,Client, Input } = require('../models');
 // const { UserResource, CompanyResource } = require('./resources');
+
+const translation = require('./translation')
+
 const sidebarGroups = {
   user: {
     name: 'User Management',
@@ -26,6 +29,8 @@ const sidebarGroups = {
 const { UserResource, CompanyResource,ProductResource,ProviderResource,
         ClientResource, InputResource      
 } = require('./resources');
+
+
 const adminBro = new AdminBro({
   rootPath: '/admin',
   loginPath: '/admin/login',
@@ -39,7 +44,7 @@ const adminBro = new AdminBro({
     resource: Company,
     options: {
       ...CompanyResource,
-      parent: sidebarGroups.company,
+      parent: sidebarGroups.user,
     }
   },{
     resource: Product,
@@ -67,6 +72,9 @@ const adminBro = new AdminBro({
     }
    }
   ],
+  locale: {
+    ...translation
+  },
   branding: {
     companyName: 'Morangando',
     softwareBrothers: false,
