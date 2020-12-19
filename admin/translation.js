@@ -50,7 +50,9 @@ module.exports = {
                     id_product: "Nome do produto",
                     quantity: "Quantidade (Caixas)",
                     value: "Preço (Caixa)",
-                    id_provider: "Fornecedor"
+                    id_provider: "Fornecedor",
+                    createdAt: 'Data da Remessa',
+                    updatedAt: "Atualizado em"
                 }
             },
             Providers:{
@@ -60,13 +62,17 @@ module.exports = {
                     phone:'Telefone',
                     city: 'Cidade',
                     neighborhood:'Bairro',
-                    email: 'Email'
+                    email: 'Email',
+                    
+                }
+            },
+            Clients:{
+                properties:{
+                    name:'Nome',
+
                 }
             }
           },
-
-
-
 
           messages: {
             successfullyBulkDeleted: ' {{count}} registros foram apagados com sucesso.',

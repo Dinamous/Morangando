@@ -1,10 +1,14 @@
 const { Product } = require("../../models");
 module.exports = {
-  listProperties: ['id_product', 'quantity', 'value','id_provider'],
+  listProperties: ['id_product', 'quantity', 'value','id_provider','createdAt'],
     properties:{
-       id_provider:{
-         label: 'Fornecedor'
-       }
+        
+        updatedAt:{
+            isVisible:false
+        },
+        id:{
+            isVisible:false
+        }
     },
 
   actions: {
