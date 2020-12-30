@@ -1,5 +1,10 @@
 const AdminBro = require('admin-bro');
-const { User, Company,Product,Provider,Client, Input } = require('../models');
+const { User, Company,Product,
+  Provider,Client, Input, Output } = require('../models');
+
+const tema = require('./theme')
+
+
 // const { UserResource, CompanyResource } = require('./resources');
 
 const translation = require('./translation')
@@ -27,7 +32,7 @@ const sidebarGroups = {
   }
 };
 const { UserResource, CompanyResource,ProductResource,ProviderResource,
-        ClientResource, InputResource      
+        ClientResource, InputResource, OutputResource      
 } = require('./resources');
 
 
@@ -70,14 +75,23 @@ const adminBro = new AdminBro({
       ...InputResource,
       parent: sidebarGroups.remessas,
     }
+   },{
+    resource: Output,
+    options: {
+      ...OutputResource,
+      parent: sidebarGroups.remessas,
+    }
    }
   ],
   locale: {
     ...translation
   },
   branding: {
+    theme:tema,
     companyName: 'Morangando',
     softwareBrothers: false,
+    // favicon:Favicon,
+    logo:'../src/imageResources/teste.jpg'
   }
 });
 

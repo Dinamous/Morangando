@@ -43,11 +43,5 @@ module.exports = {
       },
     },
   },
-  locale: {
-    translations: {
-      labels: {
-        Input: 'Entrada de Produtos'
-      }
-    }
-  },
+
 };

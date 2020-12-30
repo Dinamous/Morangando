@@ -32,7 +32,8 @@ module.exports = {
             Providers: 'Fornecedores',
             Clients: 'Clientes',
             Inputs: 'Entrada de Produtos',
-            Clients: 'Clientes'
+            Outputs: 'Saída de Produtos',
+            Clients: 'Clientes',
           },
           properties: {
         
@@ -53,6 +54,18 @@ module.exports = {
                     id_provider: "Fornecedor",
                     createdAt: 'Data da Remessa',
                     updatedAt: "Atualizado em"
+                }
+            },
+            Outputs:{
+                //'id_product', 'quantity', 'value','id_provider'
+                properties:{
+                    id_product: "Nome do produto",
+                    quantity: "Quantidade (Caixas)",
+                    value: "Preço (Caixa)",
+                    id_client: "Cliente",
+                    createdAt: 'Data da Remessa',
+                    updatedAt: "Atualizado em",
+                    cut: "Quantidade para Corte"
                 }
             },
             Providers:{

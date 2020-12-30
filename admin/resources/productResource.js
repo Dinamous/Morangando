@@ -1,7 +1,13 @@
 module.exports = {
     properties: {
         id: {
-          isVisible: false,
+          isVisible:{
+            show: false,
+            edit: false,
+            list: false,
+            filter: false,
+        } 
+          
         },
         createdAt:{
             isVisible: false,

@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Input extends Model {
+  class Output extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  Input.init({
-    id_provider:{
+  Output.init({
+    id_client: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Providers',
+        model: 'Clients',
         key: 'id',
       },
     },
@@ -29,19 +29,20 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     quantity: DataTypes.INTEGER,
-    
+    cut: DataTypes.INTEGER,
+    value: DataTypes.DOUBLE
   }, {
     sequelize,
-    modelName: 'Input',
+    modelName: 'Output',
   });
 
-  Input.associate = function(models) {
-    Input.belongsTo(models.Provider, { foreignKey: 'id_provider' });
+  Output.associate = function(models) {
+    Output.belongsTo(models.Client, { foreignKey: 'id_client' });
   };
 
-  Input.associate = function(models) {
-    Input.belongsTo(models.Product, { foreignKey: 'id_product' });
+  Output.associate = function(models) {
+    Output.belongsTo(models.Product, { foreignKey: 'id_product' });
   };
 
-  return Input;
+  return Output;
 };
