@@ -19,6 +19,8 @@ module.exports = {
             logout: 'Sair',
             seeTheDocumentation: 'Veja: <1>na documentação</1>',
             createFirstRecord: 'Adicionar o primeiro registro',
+            addNewItem: 'Adicionar novo registro',
+            
           },
           labels: {
             navigation: 'Navegação',

@@ -89,8 +89,9 @@ const adminBro = new AdminBro({
   branding: {
     theme: tema,
     softwareBrothers: false,
-    favicon:'./src/imageResources/favicon.ico',
+    favicon:'https://raw.githubusercontent.com/Dinamous/Morangando/main/src/imageResources/favicon.ico',
     // logo:'../src/imageResources/logo.png',
+    logo:'https://raw.githubusercontent.com/Dinamous/Morangando/main/src/imageResources/logo.svg',
     companyName: 'Morangando'
     
   }
