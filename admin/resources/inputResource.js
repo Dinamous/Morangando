@@ -1,6 +1,6 @@
 const { Product } = require("../../models");
 module.exports = {
-  listProperties: ['id_product', 'quantity', 'value','id_provider','createdAt'],
+  listProperties: ['id_product', 'quantity','id_provider','createdAt'],
     properties:{
         
         updatedAt:{

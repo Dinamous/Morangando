@@ -87,11 +87,12 @@ const adminBro = new AdminBro({
     ...translation
   },
   branding: {
-    theme:tema,
-    companyName: 'Morangando',
+    theme: tema,
     softwareBrothers: false,
-    // favicon:Favicon,
-    logo:'../src/imageResources/teste.jpg'
+    favicon:'./src/imageResources/favicon.ico',
+    // logo:'../src/imageResources/logo.png',
+    companyName: 'Morangando'
+    
   }
 });
 
