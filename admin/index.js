@@ -29,6 +29,14 @@ const sidebarGroups = {
   remessas:{
     name: "Remessas",
     icon: "Box"
+  },
+  lavouras:{
+    name: "Lavouras",
+    icon: "Sprout"
+  },
+  financas:{
+    name: "FInanças",
+    icon: "Currency dollar"
   }
 };
 const { UserResource, CompanyResource,ProductResource,ProviderResource,

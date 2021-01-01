@@ -50,6 +50,6 @@ const router = AdminBroExpress.buildAuthenticatedRouter(adminBro,
 
 
 app.use(adminBro.options.rootPath, router);
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Server is listening on port: ${PORT}`);
 });
