@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sequelize": "cross-env NODE_PATH=. sequelize",
     "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
