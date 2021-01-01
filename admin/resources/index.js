@@ -4,6 +4,6 @@ module.exports = {
     ProductResource:require('./productResource'),
     ProviderResource:require('./providerResource'),
     ClientResource:require('./clientResource'),
-    InputResource:require('./InputResource'),
+    InputResource:require('./inputResource'),
     OutputResource:require('./outputResource'),
   };
