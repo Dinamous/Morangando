@@ -1,3 +1,7 @@
+require('dotenv').config();
+
+console.log(process.env.DATABASE_HOST);
+
 module.exports = {
   "development": {
     "username": "root",
