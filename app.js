@@ -1,9 +1,12 @@
+const dotenv = require("dotenv");
 const express = require("express");
 const AdminBro = require('admin-bro')
 
 const AdminBroExpress = require('admin-bro-expressjs');
 const AdminBroSequelize = require('admin-bro-sequelizejs');
 const { authenticate, sessionStorage } = require('./admin/util')
+
+dotenv.config();
 
 AdminBro.registerAdapter(AdminBroSequelize);
 const adminBro = require('./admin');

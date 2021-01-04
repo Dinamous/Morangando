@@ -9,3 +9,8 @@ npx sequelize-cli db:migrate
 
 //apagar tabela
 npx sequelize-cli db:migrate:undo --name nome da migration
+
+
+==========================================================================
+//rodar banco heroku
+
