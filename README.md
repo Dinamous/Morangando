@@ -55,112 +55,123 @@
   <summary>Conteúdo do Projeto</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o Projeto</a>
+      <a href="#sobre-o-projeto">Sobre o Projeto</a>
       <ul>
-        <li><a href="#built-with">Como o projeto foi construído</a></li>
+        <li><a href="#construido-com">Como o projeto foi construído</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Começando... </a>
+      <a href="#comecando">Começando... </a>
       <ul>
-        <li><a href="#prerequisites">Prerequisitos</a></li>
-        <li><a href="#installation">Instalações</a></li>
+        <li><a href="#prerequisitos">Prerequisitos</a></li>
+        <li><a href="#instalacao">Instalações</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Aplicações da usabilidade deste projeto</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Como COntribuir</a></li>
+    <li><a href="#utilização">Aplicações da usabilidade deste projeto</a></li>
+    <!-- <li><a href="#roadmap">Roadmap</a></li> -->
+    <li><a href="#Contribuindo">Como COntribuir</a></li>
     <li><a href="#license">Licensa</a></li>
-    <li><a href="#contact">Contato</a></li>
-    <li><a href="#acknowledgements">Conhecimentos adquiridos/utilizados</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#conhecimentos-adquiridos">Conhecimentos adquiridos/utilizados</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Sobre o Projeto
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Este projeto surgiu com a necessidade de pequenos produtores necessitarem de formas de gerenciamento de seus pequenos negócios. Desta forma criamos o Projeto Morangando, um sistema online para estes pequenos produtores conseguirem junto ao auxílio da tecnologia otimizarem seu tempo e conseguirem ter acesso a sua gestão de qualquer local.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+Este Projeto oferece as seguintes facilidades:
+* Organização de Fornecedores de Produtos e Cliente.
+* Gerenciamento de Lavouras.
+* Gerenciamento de caixa, incluindo relatorios mensais.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+### Construído Com
 
-### Built With
+Este projeto foi construido principalmente com o framework Adminbro, uma ferramenta que possibilita uma imensa facilidade de integração automatizada com o backend, no qual fornece uma interface predefinida construída em React.js.
+Pelo fato deste framework consumir recursos de React.js é possível realizar uma grande personalização da interface.
+Para as principais funcionalidades do back-end foi utilizado a ferramenta de gerenciamento ORM Sequelize para o banco de dados.
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [Adminbro](https://adminbro.com)
+* [React.js](https://pt-br.reactjs.org)
+* [Sequelize](https://sequelize.org)
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Começando
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Aqui vamos descrever como criar a sua versão local deste projeto, para isso siga os próximos passos.
 
-### Prerequisites
+### Prerequisitos
 
-This is an example of how to list things you need to use the software and how to install them.
+Para darmos início antes de tudo precisamos garantir que possua a versão mais recente do node, caso ainda não possua utilise este comando:
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install -g npm
   ```
 
-### Installation
+### Instalação
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+Agora que já possuímos a ferramenta mais necessária vamos partir para sua versão local.
+
+1. Clone este repositório para a sua máquina
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Dinamous/Morangando.git
    ```
-3. Install NPM packages
+2. Instale as dependencias do projeto
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+3. Precisamos instanciar o banco de dados
+   ```sh
+   npx sequelize-cli db:migrate
+   ```
+4. Agora que temos as tabelas vamos preenchê-las com algum dados
+   ```sh
+   npx sequelize-cli db:seed:all
+   ```   
+5.Agora que temos tudo pronto precisamos rodar nossa aplicação localmente
+   ```sh
+   npm run dev
    ```
 
 
-
 <!-- USAGE EXAMPLES -->
-## Usage
+## utilização
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Agora que a aplicação está pronta você precisa das credenciais para acessar o sistema e ser autenticado.
+```
+Email: admin@admin.com
+Password: password
+```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+<!-- ## Roadmap
 
 See the [open issues](https://github.com/Dinamous/Morangando/issues) for a list of proposed features (and known issues).
-
+ -->
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contribuindo
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Constribuições tornam a comunidade open source um lugar incrível por isso sinta-se livre para contruibuir com nosso projeto com novas features.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Crie um Fork do projeto
+2. Cria uma nova Branch com sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commite suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Dê Push na sua  Branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
 
 
@@ -172,16 +183,16 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+## Contato
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Matheus Augusto Simões - [@your_twitter](https://twitter.com/mataugs) - matheusaugustosimoes@hotmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Dinamous/Morangando](https://github.com/Dinamous/Morangando)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## Conhecimentos Adquiridos
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)

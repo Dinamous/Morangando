@@ -14,8 +14,8 @@ const PORT = 3000;
 const app = express();
 
 //session
-var session = require('express-session');
-var MySQLStore = require('mysql-express-session')(session);
+// var session = require('express-session');
+// var MySQLStore = require('mysql-express-session')(session);
 
 // var options = {
 // 	host: 'localhost',// Host name for database connection.
