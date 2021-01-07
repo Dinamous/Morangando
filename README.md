@@ -57,19 +57,19 @@
     <li>
       <a href="#sobre-o-projeto">Sobre o Projeto</a>
       <ul>
-        <li><a href="#construido-com">Como o projeto foi construído</a></li>
+        <li><a href="#construído-com">Como o projeto foi construído</a></li>
       </ul>
     </li>
     <li>
       <a href="#comecando">Começando... </a>
       <ul>
         <li><a href="#prerequisitos">Prerequisitos</a></li>
-        <li><a href="#instalacao">Instalações</a></li>
+        <li><a href="#instalação">Instalações</a></li>
       </ul>
     </li>
     <li><a href="#utilização">Aplicações da usabilidade deste projeto</a></li>
     <!-- <li><a href="#roadmap">Roadmap</a></li> -->
-    <li><a href="#Contribuindo">Como COntribuir</a></li>
+    <li><a href="#Contribuindo">Como Contribuir</a></li>
     <li><a href="#license">Licensa</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="#conhecimentos-adquiridos">Conhecimentos adquiridos/utilizados</a></li>
@@ -143,7 +143,7 @@ Agora que já possuímos a ferramenta mais necessária vamos partir para sua ver
 
 
 <!-- USAGE EXAMPLES -->
-## utilização
+## Utilização
 
 Agora que a aplicação está pronta você precisa das credenciais para acessar o sistema e ser autenticado.
 ```
