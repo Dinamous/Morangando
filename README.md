@@ -5,8 +5,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -15,14 +13,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -47,8 +44,6 @@
     <a href="https://github.com/Dinamous/Morangando/issues">Solicitar Funcionalidade</a>
   </p>
 </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -76,9 +71,8 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## Sobre o Projeto
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -86,10 +80,10 @@
 Este projeto surgiu com a necessidade de pequenos produtores necessitarem de formas de gerenciamento de seus pequenos negócios. Desta forma criamos o Projeto Morangando, um sistema online para estes pequenos produtores conseguirem junto ao auxílio da tecnologia otimizarem seu tempo e conseguirem ter acesso a sua gestão de qualquer local.
 
 Este Projeto oferece as seguintes facilidades:
-* Organização de Fornecedores de Produtos e Cliente.
-* Gerenciamento de Lavouras.
-* Gerenciamento de caixa, incluindo relatorios mensais.
 
+- Organização de Fornecedores de Produtos e Cliente.
+- Gerenciamento de Lavouras.
+- Gerenciamento de caixa, incluindo relatorios mensais.
 
 ### Construído Com
 
@@ -97,13 +91,12 @@ Este projeto foi construido principalmente com o framework Adminbro, uma ferrame
 Pelo fato deste framework consumir recursos de React.js é possível realizar uma grande personalização da interface.
 Para as principais funcionalidades do back-end foi utilizado a ferramenta de gerenciamento ORM Sequelize para o banco de dados.
 
-* [Adminbro](https://adminbro.com)
-* [React.js](https://pt-br.reactjs.org)
-* [Sequelize](https://sequelize.org)
-
-
+- [Adminbro](https://adminbro.com)
+- [React.js](https://pt-br.reactjs.org)
+- [Sequelize](https://sequelize.org)
 
 <!-- GETTING STARTED -->
+
 ## Começando
 
 Aqui vamos descrever como criar a sua versão local deste projeto, para isso siga os próximos passos.
@@ -111,7 +104,8 @@ Aqui vamos descrever como criar a sua versão local deste projeto, para isso sig
 ### Prerequisitos
 
 Para darmos início antes de tudo precisamos garantir que possua a versão mais recente do node, caso ainda não possua utilise este comando:
-* npm
+
+- npm
   ```sh
   npm install -g npm
   ```
@@ -128,24 +122,21 @@ Agora que já possuímos a ferramenta mais necessária vamos partir para sua ver
    ```sh
    npm install
    ```
-3. Precisamos instanciar o banco de dados
+3. Precisamos instanciar o banco de dados, criar as tabelas e preenchê-las com dados:
    ```sh
-   npx sequelize-cli db:migrate
+   npm run preinstall
    ```
-4. Agora que temos as tabelas vamos preenchê-las com algum dados
-   ```sh
-   npx sequelize-cli db:seed:all
-   ```   
-5.Agora que temos tudo pronto precisamos rodar nossa aplicação localmente
+   4.Agora que temos tudo pronto precisamos rodar nossa aplicação localmente
    ```sh
    npm run dev
    ```
 
-
 <!-- USAGE EXAMPLES -->
+
 ## Utilização
 
 Agora que a aplicação está pronta você precisa das credenciais para acessar o sistema e ser autenticado.
+
 ```
 Email: admin@admin.com
 Password: password
@@ -153,16 +144,14 @@ Password: password
 
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
-
-
 <!-- ROADMAP -->
 <!-- ## Roadmap
 
 See the [open issues](https://github.com/Dinamous/Morangando/issues) for a list of proposed features (and known issues).
  -->
 
-
 <!-- CONTRIBUTING -->
+
 ## Contribuindo
 
 Constribuições tornam a comunidade open source um lugar incrível por isso sinta-se livre para contruibuir com nosso projeto com novas features.
@@ -170,47 +159,42 @@ Constribuições tornam a comunidade open source um lugar incrível por isso sin
 1. Crie um Fork do projeto
 2. Cria uma nova Branch com sua feature (`git checkout -b feature/AmazingFeature`)
 3. Commite suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Dê Push na sua  Branch (`git push origin feature/AmazingFeature`)
+4. Dê Push na sua Branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
+
 ## Contato
 
 Matheus Augusto Simões - [@your_twitter](https://twitter.com/mataugs) - matheusaugustosimoes@hotmail.com
 
 Project Link: [https://github.com/Dinamous/Morangando](https://github.com/Dinamous/Morangando)
 
-
-
 <!-- ACKNOWLEDGEMENTS -->
+
 ## Conhecimentos Adquiridos
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
 
-
-
-
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Img Shields](https://shields.io)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Pages](https://pages.github.com)
+- [Animate.css](https://daneden.github.io/animate.css)
+- [Loaders.css](https://connoratherton.com/loaders)
+- [Slick Carousel](https://kenwheeler.github.io/slick)
+- [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+- [Sticky Kit](http://leafo.net/sticky-kit)
+- [JVectorMap](http://jvectormap.com)
+- [Font Awesome](https://fontawesome.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/Dinamous/Morangando.svg?style=for-the-badge
 [contributors-url]: https://github.com/Dinamous/Morangando/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Dinamous/Morangando.svg?style=for-the-badge

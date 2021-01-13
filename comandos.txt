@@ -1,3 +1,6 @@
+//criar banco
+npx sequelize-cli db:create
+
 //Criar Model
 npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
 
