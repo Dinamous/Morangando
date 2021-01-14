@@ -8,28 +8,32 @@
     "sequelize": "cross-env NODE_PATH=. sequelize",
     "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon",
     "start": "node app.js",
-    "preinstall":"npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+    "datatest": "npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
   },
   "author": {
-    "name":"Matheus Augusto Simões",
-    "email":"matheusaugustosimeos@hotmail.com"
+    "name": "Matheus Augusto Simões",
+    "email": "matheusaugustosimeos@hotmail.com"
   },
-  "bugs":"https://github.com/Dinamous/Morangando/issues",
+  "bugs": "https://github.com/Dinamous/Morangando/issues",
   "license": "ISC",
   "dependencies": {
     "admin-bro": "^3.3.1",
     "admin-bro-expressjs": "^2.1.1",
     "admin-bro-sequelizejs": "^0.5.1",
     "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
     "connect-redis": "^5.0.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
+    "express-handlebars": "^5.2.0",
     "express-mysql-session": "^2.1.5",
     "express-session": "^1.17.1",
     "mysql-express-session": "^0.5.2",
     "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "pg": "^8.5.1",
     "redis": "^3.0.2",
     "sequelize": "^6.3.5"

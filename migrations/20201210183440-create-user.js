@@ -23,6 +23,13 @@ module.exports = {
       encryptedPassword: {
         type: Sequelize.STRING
       },
+      last_login: {
+        type: Sequelize.DATE
+      },
+      status: {
+        type: Sequelize.ENUM('active', 'inactive'),
+        defaultValue: 'active'
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
