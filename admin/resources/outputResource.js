@@ -1,4 +1,4 @@
-const { Product } = require("../../models");
+const { Product } = require("../../database/models");
 const { ValidationError } = require('admin-bro')
 
 
@@ -15,11 +15,11 @@ module.exports = {
   actions: {
     new: {
       before: async (request) => {
-        const { payload,method } = request;
+        const { payload, method } = request;
         //verificando se a quantidade solicitada é menor ou igual
         //a quantidade existente no estoque
         if (method === "post") {
-          
+
 
           //id do produto
           const id = payload.id_product;
@@ -34,7 +34,7 @@ module.exports = {
               {
                 quantity: {
                   message:
-                    "Seu estoque apenas possui "+productRecord.inStorage+" caixas deste produto." ,
+                    "Seu estoque apenas possui " + productRecord.inStorage + " caixas deste produto.",
                 },
               },
               {
@@ -43,12 +43,12 @@ module.exports = {
             );
           }
 
-          if(quantityAdd<= 0){
+          if (quantityAdd <= 0) {
             throw new ValidationError(
               {
                 quantity: {
                   message:
-                    "Você solicitou a saída de um valor inaceitável de caixas" ,
+                    "Você solicitou a saída de um valor inaceitável de caixas",
                 },
               },
               {
@@ -61,20 +61,20 @@ module.exports = {
         }
       },
 
-    // before: async (request) => {
-    //     const {method, payload} = request
-    //     if (method === 'post' && payload.id_product === '3') {
-    //         console.log("===================== achou id =======================")
-    //       throw new ValidationError({
-    //         name: {
-    //           message: 'cannot be "forbidden"',
-    //         },
-    //       }, {
-    //         message: 'something wrong happened',
-    //       })
-    //     }
-    //     return request
-    //   },
+      // before: async (request) => {
+      //     const {method, payload} = request
+      //     if (method === 'post' && payload.id_product === '3') {
+      //         console.log("===================== achou id =======================")
+      //       throw new ValidationError({
+      //         name: {
+      //           message: 'cannot be "forbidden"',
+      //         },
+      //       }, {
+      //         message: 'something wrong happened',
+      //       })
+      //     }
+      //     return request
+      //   },
       after: async (originalResponse, request, context) => {
         //verificando se não possui erros ou não é delete
         if (
@@ -95,11 +95,11 @@ module.exports = {
 
           const sum = parseInt(productRecord.inStorage) - parseInt(quantityAdd);
 
-          if(sum<0){
-            originalResponse.record.errors.quantity = "Seu estoque apenas possui "+productRecord.inStorage+" caixas deste produto."
+          if (sum < 0) {
+            originalResponse.record.errors.quantity = "Seu estoque apenas possui " + productRecord.inStorage + " caixas deste produto."
 
 
-          }else{
+          } else {
             //adicionando a quantidade da remessa na tabela produto
             console.log("in storage = " + productRecord.inStorage);
             productRecord.inStorage = sum;
@@ -107,7 +107,7 @@ module.exports = {
             productRecord.save();
           }
 
-          
+
 
           return originalResponse;
         }

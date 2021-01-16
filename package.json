@@ -8,13 +8,13 @@
     "sequelize": "cross-env NODE_PATH=. sequelize",
     "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon",
     "start": "node app.js",
-    "preinstall":"npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+    "preinstall": "npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
   },
   "author": {
-    "name":"Matheus Augusto Simões",
-    "email":"matheusaugustosimeos@hotmail.com"
+    "name": "Matheus Augusto Simões",
+    "email": "matheusaugustosimeos@hotmail.com"
   },
-  "bugs":"https://github.com/Dinamous/Morangando/issues",
+  "bugs": "https://github.com/Dinamous/Morangando/issues",
   "license": "ISC",
   "dependencies": {
     "admin-bro": "^3.3.1",

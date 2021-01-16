@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const { User } = require('../models');
+const { User } = require('../database/models');
 const redis = require('redis');
 const session = require('express-session');
 let RedisStore = require('connect-redis')(session);
@@ -25,14 +25,14 @@ async function authenticate(email, password) {
   if (userRecord) {
     const matched = await bcrypt.compare(password, userRecord.encryptedPassword);
     if (matched) {
-        // console.log("achouuuuuuuuuu")
+      // console.log("achouuuuuuuuuu")
       return true;
     }
   }
-//   console.log("nadaaaaaaa")
+  //   console.log("nadaaaaaaa")
   return false;
 }
 module.exports = {
-authenticate,
-// sessionStorage,
+  authenticate,
+  // sessionStorage,
 };

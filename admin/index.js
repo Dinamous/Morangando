@@ -1,6 +1,6 @@
 const AdminBro = require('admin-bro');
-const { User, Company,Product,
-  Provider,Client, Input, Output } = require('../models');
+const { User, Company, Product,
+  Provider, Client, Input, Output } = require('../database/models');
 
 const tema = require('./theme')
 
@@ -18,29 +18,29 @@ const sidebarGroups = {
     name: 'Company Management',
     icon: 'Product'
   },
-  product:{
+  product: {
     name: "Gerenciar Produtos",
     icon: 'Product'
   },
-  provider:{
+  provider: {
     name: "Gerenciar Colaboradores",
     icon: 'Events'
   },
-  remessas:{
+  remessas: {
     name: "Remessas",
     icon: "Box"
   },
-  lavouras:{
+  lavouras: {
     name: "Lavouras",
     icon: "Sprout"
   },
-  financas:{
+  financas: {
     name: "FInanças",
     icon: "Currency dollar"
   }
 };
-const { UserResource, CompanyResource,ProductResource,ProviderResource,
-        ClientResource, InputResource, OutputResource      
+const { UserResource, CompanyResource, ProductResource, ProviderResource,
+  ClientResource, InputResource, OutputResource
 } = require('./resources');
 
 
@@ -53,43 +53,43 @@ const adminBro = new AdminBro({
       ...UserResource,
       parent: sidebarGroups.user,
     }
-   }, {
+  }, {
     resource: Company,
     options: {
       ...CompanyResource,
       parent: sidebarGroups.user,
     }
-  },{
+  }, {
     resource: Product,
     options: {
       ...ProductResource,
       parent: sidebarGroups.product,
     }
-   },{
+  }, {
     resource: Provider,
     options: {
       ...ProviderResource,
       parent: sidebarGroups.provider,
     }
-   },{
+  }, {
     resource: Client,
     options: {
       ...ClientResource,
       parent: sidebarGroups.provider,
     }
-   },{
+  }, {
     resource: Input,
     options: {
       ...InputResource,
       parent: sidebarGroups.remessas,
     }
-   },{
+  }, {
     resource: Output,
     options: {
       ...OutputResource,
       parent: sidebarGroups.remessas,
     }
-   }
+  }
   ],
   locale: {
     ...translation
@@ -97,11 +97,11 @@ const adminBro = new AdminBro({
   branding: {
     theme: tema,
     softwareBrothers: false,
-    favicon:'https://raw.githubusercontent.com/Dinamous/Morangando/main/src/imageResources/favicon.ico',
+    favicon: 'https://raw.githubusercontent.com/Dinamous/Morangando/main/src/imageResources/favicon.ico',
     // logo:'../src/imageResources/logo.png',
-    logo:'https://raw.githubusercontent.com/Dinamous/Morangando/main/src/imageResources/logo.svg',
+    logo: 'https://raw.githubusercontent.com/Dinamous/Morangando/main/src/imageResources/logo.svg',
     companyName: 'Morangando'
-    
+
   }
 });
 
