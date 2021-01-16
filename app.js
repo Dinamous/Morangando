@@ -20,40 +20,61 @@ const PORT = 3000;
 const app = express();
 const passport = require('passport')
 const session = require('express-session')
+var exphbs = require('express-handlebars')
+
+//configurações do bodyParser, para uma melhor leitura JSON
+const bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//Routes
 
 
 //Configurações do Passaport
-// app.use(session({
-//    secret: 'keyboard cat',
-//    resave: true,
-//    saveUninitialized:true
-//   }
-// )); 
-// app.use(passport.initialize());
-// app.use(passport.session()); 
-// armazenar infomações de login
+app.use(session({
+  secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized: true
+}
+));
+app.use(passport.initialize());
+app.use(passport.session());
+//armazenar infomações de login
+
+//For Handlebars
+app.set('views', './src/views')
+app.engine('hbs', exphbs({
+  extname: '.hbs',
+  defaultLayout: false
+}));
+app.set('view engine', '.hbs');
+
+// app.engine(
+//   "hbs",
+//   expressHbs({
+//     extname: "hbs",
+//     defaultLayout: false,
+//     layoutsDir: "views/layouts/"
+//   })
+// );
+
+var authRoute = require('./src/routes/auth.js')(app);
+// const router = AdminBroExpress.buildAuthenticatedRouter(adminBro,
+//   {
+//     cookieName: 'admin-bro',
+//     cookiePassword: 'meudeusdoceupalamordedeusmeajdua',
+//     authenticate
+//   }, null,
+//   {
+//     resave: false,
+//     saveUninitialized: true,
+//     //store: sessionStore
+//   })
 
 
-const router = AdminBroExpress.buildAuthenticatedRouter(adminBro,
-  {
-    cookieName: 'admin-bro',
-    cookiePassword: 'meudeusdoceupalamordedeusmeajdua',
-    authenticate
-  }, null,
-  {
-    resave: false,
-    saveUninitialized: true,
-    //store: sessionStore
-  })
 
 
-//configurações do bodyParser, para uma melhor leitura JSON
-// const bodyParser = require('body-parser')
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
-
-
-app.use(adminBro.options.rootPath, router);
+// app.use(adminBro.options.rootPath, router);
 
 if (process.env.NODE_ENV == "production") {
   app.listen(process.env.PORT, () => {

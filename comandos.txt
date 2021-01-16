@@ -17,3 +17,6 @@ npx sequelize-cli db:migrate:undo --name nome da migration
 ==========================================================================
 //rodar banco heroku
 
+//portas nodes
+lsof -i:3000 
+kill -9 [PID] 
