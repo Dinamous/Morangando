@@ -1,6 +1,6 @@
 module.exports = {
     language: 'pl',
-    translations:{
+    translations: {
         actions: {
             new: 'Adicionar Registro',
             edit: 'Editar',
@@ -8,8 +8,8 @@ module.exports = {
             delete: 'Deletar',
             bulkDelete: 'Deletar Todos',
             list: 'Listar',
-          },
-          buttons: {
+        },
+        buttons: {
             save: 'Salvar Registro',
             filter: 'Filtro',
             applyChanges: 'Aplicar Mudanças',
@@ -20,9 +20,9 @@ module.exports = {
             seeTheDocumentation: 'Veja: <1>na documentação</1>',
             createFirstRecord: 'Adicionar o primeiro registro',
             addNewItem: 'Adicionar novo registro',
-            
-          },
-          labels: {
+
+        },
+        labels: {
             navigation: 'Navegação',
             pages: 'Páginas',
             selectedRecords: '({{selected}}) Selecionados',
@@ -37,21 +37,22 @@ module.exports = {
             Outputs: 'Saída de Produtos',
             Clients: 'Clientes',
             loginWelcome: 'Bem-vindo!',
-            loginPassword: 'Senha'
-          },
-          properties: {
-        
-          },
-          resources: {
-            Products:{
+            loginPassword: 'Senha',
+            Expenses: 'Despesas'
+        },
+        properties: {
+
+        },
+        resources: {
+            Products: {
                 properties: {
                     name: 'Nome do Produto',
                     inStorage: 'Quantidade em estoque'
                 }
             },
-            Inputs:{
+            Inputs: {
                 //'id_product', 'quantity', 'value','id_provider'
-                properties:{
+                properties: {
                     id_product: "Nome do produto",
                     quantity: "Quantidade (Caixas)",
                     id_provider: "Fornecedor",
@@ -59,9 +60,9 @@ module.exports = {
                     updatedAt: "Atualizado em"
                 }
             },
-            Outputs:{
+            Outputs: {
                 //'id_product', 'quantity', 'value','id_provider'
-                properties:{
+                properties: {
                     id_product: "Nome do produto",
                     quantity: "Quantidade (Caixas)",
                     value: "Preço (Caixa)",
@@ -71,30 +72,37 @@ module.exports = {
                     cut: "Quantidade para Corte"
                 }
             },
-            Providers:{
+            Providers: {
                 //listProperties: ['name', 'phone', 'city','neighborhood','email']
-                properties:{
-                    name:'Nome',
-                    phone:'Telefone',
+                properties: {
+                    name: 'Nome',
+                    phone: 'Telefone',
                     city: 'Cidade',
-                    neighborhood:'Bairro',
+                    neighborhood: 'Bairro',
                     email: 'Email',
-                    
+
                 }
             },
-            Clients:{
-                properties:{
-                    name:'Nome',
+            Clients: {
+                properties: {
+                    name: 'Nome',
 
                 }
+            },
+            Expenses: {
+                properties: {
+                    expense_date: 'Data da Despesa',
+                    expense_value: ' Valor da Despesa',
+                    description: 'Descrição da Despesa'
+                }
             }
-          },
+        },
 
-          messages: {
+        messages: {
             successfullyBulkDeleted: ' {{count}} registros foram apagados com sucesso.',
             successfullyBulkDeleted_plural: ' {{count}} registros foram apagados com sucesso.',
-             successfullyDeleted: 'Registro apagado com sucesso.',
-             successfullyUpdated: 'Registro atualizado com sucesso.',
+            successfullyDeleted: 'Registro apagado com sucesso.',
+            successfullyUpdated: 'Registro atualizado com sucesso.',
             thereWereValidationErrors: 'Existem erros de validação - por favor os confira para continuar.',
             successfullyCreated: 'Registro criado com sucesso.',
             bulkDeleteError: 'Ocorreu um erro ao deletar os registros, Confira o console para mais informações.',
@@ -113,12 +121,12 @@ module.exports = {
             confirmDelete: 'Você realmente deseja deletar este registro?',
 
             // ======================
-        
+
             forbiddenError: 'You cannot perform action {{actionName}} on {{resourceId}}',
             anyForbiddenError: 'You cannot perform given action',
-           
+
             noRecords: 'No records',
-           
+
             welcomeOnBoard_title: 'Seja bem-vindo!',
             welcomeOnBoard_subtitle: 'Agora você é um de nós! Preparamos algumas dicas para começar:',
             loginWelcome: 'Morangando - A melhor forma de organizar e facilitar o seu trabalho administrativo agrícola.',
@@ -141,7 +149,7 @@ module.exports = {
             needMoreSolutions_title: 'Need more advanced solutions?',
             needMoreSolutions_subtitle: 'We are here to provide you a beautiful UX/UI design and tailor made software based (not only) on AdminBro',
             invalidCredentials: 'Senha ou Email incorreto, verifique-os por favor.',
-          },
+        },
     }
-    
+
 }

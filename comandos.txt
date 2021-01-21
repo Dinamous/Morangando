@@ -1,14 +1,14 @@
 //criar banco
 npx sequelize-cli db:create
 
-//Criar Model
-npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
-
 //criar seed
 npx sequelize-cli seed:generate --name nomeseed
 
 //rodar as seed
 npx sequelize-cli db:seed:all
+
+//Criar Model
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
 
 //Migrar tabelas
 npx sequelize-cli db:migrate

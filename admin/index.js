@@ -1,11 +1,8 @@
 const AdminBro = require('admin-bro');
-const { User, Company, Product,
-  Provider, Client, Input, Output } = require('../database/models');
+const { User, Product,
+  Provider, Client, Input, Output, Expense } = require('../database/models');
 
 const tema = require('./theme')
-
-
-// const { UserResource, CompanyResource } = require('./resources');
 
 const translation = require('./translation')
 
@@ -13,10 +10,6 @@ const sidebarGroups = {
   user: {
     name: 'User Management',
     icon: 'User',
-  },
-  company: {
-    name: 'Company Management',
-    icon: 'Product'
   },
   product: {
     name: "Gerenciar Produtos",
@@ -35,12 +28,14 @@ const sidebarGroups = {
     icon: "Sprout"
   },
   financas: {
-    name: "FInanças",
-    icon: "Currency dollar"
+    name: "Finanças",
+    icon: "Money"
   }
 };
-const { UserResource, CompanyResource, ProductResource, ProviderResource,
-  ClientResource, InputResource, OutputResource
+
+const { UserResource, ProductResource, ProviderResource,
+  ClientResource, InputResource, OutputResource,
+  ExpenseResource
 } = require('./resources');
 
 
@@ -51,12 +46,6 @@ const adminBro = new AdminBro({
     resource: User,
     options: {
       ...UserResource,
-      parent: sidebarGroups.user,
-    }
-  }, {
-    resource: Company,
-    options: {
-      ...CompanyResource,
       parent: sidebarGroups.user,
     }
   }, {
@@ -89,7 +78,14 @@ const adminBro = new AdminBro({
       ...OutputResource,
       parent: sidebarGroups.remessas,
     }
-  }
+  }, {
+    resource: Expense,
+    options: {
+      ...ExpenseResource,
+      parent: sidebarGroups.financas,
+    }
+  },
+
   ],
   locale: {
     ...translation
